@@ -1,2 +1,3 @@
-# Ruby_-_Ruby_on_Rails_Journey
-This repo consists of all my journey as a ruby and ruby on rails dev
+# Ruby Lessons from A to Z
+This is all my journey in learning ruby
+
