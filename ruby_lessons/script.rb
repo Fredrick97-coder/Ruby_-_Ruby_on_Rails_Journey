@@ -7,8 +7,37 @@
 # puts num1 + num2
 =end
 students = Array["John", "Jane", "Joe", "Jill", "Jack"]
-puts "Please enter your name: "
-name = gets.chomp()
+marks = Array.new(5, 0)
+
+def average_marks(marks)
+  sum = 0
+  marks.each do |mark|
+    sum += mark
+  end
+  return sum / marks.length
+end
+
+def get_marks(students, marks)
+  marks.each_with_index do |mark, index|
+    puts "Please enter mark for #{students[index]}: "
+    marks[index] = gets.chomp().to_i
+  end
+end
+
+def print_marks(students, marks)
+  students.each_with_index do |student, index|
+    puts "#{student} has a mark of #{marks[index]}"
+  end
+end
+
+get_marks(students, marks)
+print_marks(students, marks)
+puts "The average mark is #{average_marks(marks)}"
+
+
+
+# puts "Please enter your name: "
+# name = gets.chomp()
 # puts students.include? name.capitalize()
 # puts students.sort()
 # puts students.reverse()
